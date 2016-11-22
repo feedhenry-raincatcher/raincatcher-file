@@ -8,6 +8,8 @@
     "url": "https://github.com/feedhenry-raincatcher/raincatcher-file.git"
   },
   "scripts": {
+    "build": "wfm-template-build -m 'wfm.file.directives'",
+    "watch": "wfm-template-build -w -m 'wfm.file.directives'",
     "test": "grunt eslint"
   },
   "keywords": [
@@ -27,6 +29,7 @@
   },
   "devDependencies": {
     "grunt": "^1.0.1",
-    "grunt-eslint": "^18.0.0"
+    "grunt-eslint": "^18.0.0",
+    "fh-wfm-template-build": "0.0.9"
   }
 }
