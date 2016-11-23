@@ -7,10 +7,8 @@ try {
 
 ngModule.run(['$templateCache', function ($templateCache) {
   $templateCache.put('wfm-template/file-detail.tpl.html',
-    '\n' +
     '<md-toolbar class="content-toolbar">\n' +
     '    <div class="md-toolbar-tools">\n' +
-    '        sdfsdf\n' +
     '        <h3>\n' +
     '            {{ctrl.file.name}}\n' +
     '        </h3>\n' +
@@ -30,7 +28,7 @@ ngModule.run(['$templateCache', function ($templateCache) {
     '\n' +
     '<div class="wfm-maincol-scroll">\n' +
     '    <md-list>\n' +
-    '        <md-list-item class="md-2-line">\n' +
+    '        <md-list-item class="md-2-line" ng-if="ctrl.options.id">\n' +
     '            <md-icon md-font-set="material-icons">info</md-icon>\n' +
     '            <div class="md-list-item-text">\n' +
     '                <h3>{{ctrl.file.id}}</h3>\n' +
@@ -39,7 +37,7 @@ ngModule.run(['$templateCache', function ($templateCache) {
     '            <md-divider></md-divider>\n' +
     '        </md-list-item>\n' +
     '\n' +
-    '        <md-list-item class="md-2-line">\n' +
+    '        <md-list-item class="md-2-line" ng-if="ctrl.options.name">\n' +
     '            <md-icon md-font-set="material-icons">photo_album</md-icon>\n' +
     '            <div class="md-list-item-text">\n' +
     '                <h3>{{ctrl.file.name}}</h3>\n' +
@@ -48,7 +46,7 @@ ngModule.run(['$templateCache', function ($templateCache) {
     '            <md-divider></md-divider>\n' +
     '        </md-list-item>\n' +
     '\n' +
-    '        <md-list-item class="md-2-line">\n' +
+    '        <md-list-item class="md-2-line" ng-if="ctrl.options.uid">\n' +
     '            <md-icon md-font-set="material-icons">info_outline</md-icon>\n' +
     '            <div class="md-list-item-text">\n' +
     '                <h3>{{ctrl.file.uid}}</h3>\n' +
@@ -57,7 +55,7 @@ ngModule.run(['$templateCache', function ($templateCache) {
     '            <md-divider></md-divider>\n' +
     '        </md-list-item>\n' +
     '\n' +
-    '        <md-list-item class="md-2-line">\n' +
+    '        <md-list-item class="md-2-line" ng-if="ctrl.options.owner">\n' +
     '            <md-icon md-font-set="material-icons">account_box</md-icon>\n' +
     '            <div class="md-list-item-text">\n' +
     '                <h3>{{ctrl.workerMap[ctrl.file.owner].name}}</h3>\n' +
@@ -66,7 +64,7 @@ ngModule.run(['$templateCache', function ($templateCache) {
     '            <md-divider></md-divider>\n' +
     '        </md-list-item>\n' +
     '\n' +
-    '        <md-list-item class="md-2-line with-image">\n' +
+    '        <md-list-item class="md-2-line with-image" ng-if="ctrl.options.preview">\n' +
     '            <md-icon md-font-set="material-icons">photo</md-icon>\n' +
     '            <div class="md-list-item-text">\n' +
     '                <h3><img wfm-img uid="ctrl.file.uid" style="width:450px"></h3>\n' +
