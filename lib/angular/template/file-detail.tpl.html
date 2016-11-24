@@ -5,21 +5,12 @@
         </h3>
 
         <span flex></span>
-        <!-- <md-button class="md-icon-button" aria-label="Edit" ui-sref="app.file.edit({fileId: ctrl.file.id})">
-          <md-icon md-font-set="material-icons">edit</md-icon>
-        </md-button>
-        <md-button class="md-icon-button" aria-label="Delete" ng-click="ctrl.delete($event, ctrl.file)">
-          <md-icon md-font-set="material-icons">delete</md-icon>
-        </md-button> -->
     </div>
 </md-toolbar>
-<!-- <md-button class="md-fab" aria-label="New file" ui-sref="app.file.new">
-  <md-icon md-font-set="material-icons">add</md-icon>
-</md-button> -->
 
 <div class="wfm-maincol-scroll">
     <md-list>
-        <md-list-item class="md-2-line" ng-if="ctrl.options.id">
+        <md-list-item class="md-2-line" ng-if="ctrl.option.id" >
             <md-icon md-font-set="material-icons">info</md-icon>
             <div class="md-list-item-text">
                 <h3>{{ctrl.file.id}}</h3>
@@ -65,4 +56,4 @@
 
     </md-list>
 
-</div><!-- wfm-maincol-scroll -->
+</div>

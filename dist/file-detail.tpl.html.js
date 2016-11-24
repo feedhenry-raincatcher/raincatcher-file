@@ -14,21 +14,12 @@ ngModule.run(['$templateCache', function ($templateCache) {
     '        </h3>\n' +
     '\n' +
     '        <span flex></span>\n' +
-    '        <!-- <md-button class="md-icon-button" aria-label="Edit" ui-sref="app.file.edit({fileId: ctrl.file.id})">\n' +
-    '          <md-icon md-font-set="material-icons">edit</md-icon>\n' +
-    '        </md-button>\n' +
-    '        <md-button class="md-icon-button" aria-label="Delete" ng-click="ctrl.delete($event, ctrl.file)">\n' +
-    '          <md-icon md-font-set="material-icons">delete</md-icon>\n' +
-    '        </md-button> -->\n' +
     '    </div>\n' +
     '</md-toolbar>\n' +
-    '<!-- <md-button class="md-fab" aria-label="New file" ui-sref="app.file.new">\n' +
-    '  <md-icon md-font-set="material-icons">add</md-icon>\n' +
-    '</md-button> -->\n' +
     '\n' +
     '<div class="wfm-maincol-scroll">\n' +
     '    <md-list>\n' +
-    '        <md-list-item class="md-2-line" ng-if="ctrl.options.id">\n' +
+    '        <md-list-item class="md-2-line" ng-if="ctrl.option.id" >\n' +
     '            <md-icon md-font-set="material-icons">info</md-icon>\n' +
     '            <div class="md-list-item-text">\n' +
     '                <h3>{{ctrl.file.id}}</h3>\n' +
@@ -74,6 +65,6 @@ ngModule.run(['$templateCache', function ($templateCache) {
     '\n' +
     '    </md-list>\n' +
     '\n' +
-    '</div><!-- wfm-maincol-scroll -->\n' +
+    '</div>\n' +
     '');
 }]);
