@@ -1,5 +1,8 @@
 <md-toolbar class="content-toolbar">
     <div class="md-toolbar-tools">
+        <md-button ng-click="ctrl.closeFile($event)" hide-gt-sm class="md-icon-button">
+            <md-icon aria-label="Close" md-font-set="material-icons">close</md-icon>
+        </md-button>
         <h3>
             {{ctrl.file.name}}
         </h3>

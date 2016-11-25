@@ -9,6 +9,9 @@ ngModule.run(['$templateCache', function ($templateCache) {
   $templateCache.put('wfm-template/file-detail.tpl.html',
     '<md-toolbar class="content-toolbar">\n' +
     '    <div class="md-toolbar-tools">\n' +
+    '        <md-button ng-click="ctrl.closeFile($event)" hide-gt-sm class="md-icon-button">\n' +
+    '            <md-icon aria-label="Close" md-font-set="material-icons">close</md-icon>\n' +
+    '        </md-button>\n' +
     '        <h3>\n' +
     '            {{ctrl.file.name}}\n' +
     '        </h3>\n' +
