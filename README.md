@@ -92,6 +92,19 @@ Base url : `/file/wfm`
 | /owner/:owner/upload/base64/:filename | POST | file metadata |
 | /upload/binary | POST | file metadata  |
 
+
+## Mediator events
+the module publishes following topics:
+- `wfm:file:detail:close` - on file detail view close. 
+    
+    Client app example:
+   ```
+     mediator.subscribeForScope('wfm:file:detail:close', $scope, function() {
+       $state.go('app.file');
+     });
+    ```
+
+
 #### File metadata structure
 
 ```
