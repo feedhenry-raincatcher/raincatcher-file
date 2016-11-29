@@ -13,7 +13,7 @@ module.exports = function(grunt) {
         reporter: 'spec'
       },
       unit: {
-        src: ['lib/angular/*-spec.js']
+        src: ['lib/*-spec.js', 'lib/angular/directives/*-spec.js']
       }
     }
   });
