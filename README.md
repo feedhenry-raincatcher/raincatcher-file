@@ -48,6 +48,7 @@ List All files
 
 ```javascript
 var parameters = {
+  userId : "userId"
   //Optional topic unique identifier.
   topicUid: "uniquetopicid"
 }
