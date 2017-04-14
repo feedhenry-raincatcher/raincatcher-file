@@ -102,9 +102,6 @@ Base url : `/file/wfm`
 ## Supported storage engines
 
 By default file module would store files in filesystem temporary folder.
-To enable persistent storage please set `usePersistentStorage` flag to true in [config](./lib/config.js)
-and add [file-storage-module](https://github.com/feedhenry-raincatcher/raincatcher-file-storage) to your application.
-
 
 ### AWS S3 storage
 
@@ -123,7 +120,7 @@ var storageConfig = {
     bucket: "raincatcher-files"
   }
 }
-require('fh-wfm-file-storage/lib/cloud')(mediator, storageConfig);
+require('fh-wfm-file/lib/cloud')(mediator, storageConfig);
 ```
 
 ### Gridfs MongoDB storage
@@ -137,48 +134,5 @@ var storageConfig = {
     mongoUrl: "mongodb://localhost:27017/files"
   }
 };
-require('fh-wfm-file-storage/lib/cloud')(mediator, storageConfig);
-```
-
-### Topic Subscriptions
-
-Topics are used in file module.
-
-#### wfm:files:create
-
-##### Description
-
-Save file to the storage
-
-##### Example
-
-
-```javascript
-var parameters = {
-   // File namespace (folder)
-   namespace:null,
-   fileName:"test",
-   location: "/tmp/file"
-  //Optional topic unique identifier
-  topicUid: "uniquetopicid"
-}
-
-mediator.publish("wfm:files-store:create", parameters);
-```
-
-#### wfm:files:get
-##### Description
-
-Retrieve file from the storage (BinaryStream)
-
-##### Example
-
-```javascript
-var parameters = {
-  namespace:null,
-  fileName:"test",
-  topicUid: "uniquetopicid"
-}
-
-mediator.publish("wfm:files-store:get", parameters);
+require('fh-wfm-file/lib/cloud')(mediator, storageConfig);
 ```
